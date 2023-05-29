@@ -24,8 +24,8 @@ parameters:
   learning_rate:
     value: 1e-3
   weight_decay:
-    value: 1
+    value: 0
   num_steps:
     value: 1e5
   device:
-    value: cpu
+    value: gpu
