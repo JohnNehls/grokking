@@ -10,7 +10,7 @@ parameters:
   operation:
     value: "x/y"
   training_fraction:
-    value: [0.5]
+    value: 0.5
   num_layers:
     value: 2
   dim_model:
@@ -29,4 +29,3 @@ parameters:
     value: 1e5
   device:
     value: cpu
-  
