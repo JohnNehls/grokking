@@ -43,3 +43,11 @@ Code:
 Paper:
 
 * [Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets](https://arxiv.org/abs/2201.02177)
+
+## My Notes
+Figures:
+* [wandb.ai project](https://wandb.ai/jnehls8/grokking)
+
+Randomness:
+- Originates from random split of the data into train and validate
+- Currently removed by adding `torch.manual_seed(0)` to [data.py](./grokking/data.py)

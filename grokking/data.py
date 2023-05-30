@@ -1,5 +1,7 @@
 from math import ceil
 import torch
+torch.manual_seed(0)
+
 
 DIVISION_MODULO_OPERATIONS = {
     "x/y": lambda x, y, p: (x*y % p, y, x),
