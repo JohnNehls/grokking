@@ -1,6 +1,5 @@
 from math import ceil
 import torch
-torch.manual_seed(0)
 
 
 DIVISION_MODULO_OPERATIONS = {
@@ -43,12 +42,17 @@ def operation_mod_p_data(operation: str, p: int, eq_token: int, op_token: int):
 
     return inputs, labels
 
-def get_data(operation: str, prime: int, training_fraction: float, batch_size: int):
+def get_data(operation: str, prime: int, training_fraction: float, batch_size: int, data_seed: str):
     inputs, labels = operation_mod_p_data(operation, prime, prime, prime+1)
     dataset = torch.utils.data.TensorDataset(inputs, labels)
 
     train_size = int(training_fraction * len(dataset))
     val_size = len(dataset) - train_size
+    try:
+        torch.manual_seed(data_seed)
+        print(f'data-split seed: {data_seed}')
+    except ValueError:
+        print('data-split seed: random')
 
     train_dataset, val_dataset = torch.utils.data.random_split(dataset, [train_size, val_size])
 

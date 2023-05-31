@@ -28,4 +28,6 @@ parameters:
   num_steps:
     value: 1e5
   device:
-    value: gpu
+    value: cuda
+  data_seed:
+    value: 0

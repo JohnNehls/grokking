@@ -51,3 +51,7 @@ Figures:
 Randomness:
 - Originates from random split of the data into train and validate
 - Currently removed by adding `torch.manual_seed(0)` to [data.py](./grokking/data.py)
+
+TODOs:
+- is the late fitting from bandwidth of frequencies needed for sawtooth with 97 period?
+  - How does fitting depend on the prime factor?

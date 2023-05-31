@@ -25,7 +25,8 @@ def main(args: dict):
         config.operation,
         config.prime,
         config.training_fraction,
-        config.batch_size
+        config.batch_size,
+        config.data_seed
         )
     model = Transformer(
         num_layers=config.num_layers,
